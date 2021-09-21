@@ -10,7 +10,7 @@
         (window:resize)="onResize($event)"
       >
         <mat-grid-tile *ngFor="let lifter of ourLifters">
-          <mat-card class="example-card" [routerLink]="['/lifters', lifter.id]">
+          <mat-card class="mat-card" [routerLink]="['/lifters', lifter.id]">
             <mat-card-header>
               <div mat-card-avatar class="example-header-image"></div>
               <mat-card-title>{{ lifter.name }}</mat-card-title>

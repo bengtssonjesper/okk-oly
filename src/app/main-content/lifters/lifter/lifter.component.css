@@ -30,11 +30,6 @@
   margin: 10px;
 }
 
-.back-button {
-  width: 90px;
-  margin: 20px auto;
-}
-
 /* Media Queries */
 
 @media screen and (min-width: 200px) {

@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 
 * {
   margin: 0;
@@ -44,6 +45,7 @@ body {
 .semi-full-width {
   width: 80%;
   margin: auto;
+  overflow: auto;
   background-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -60,8 +62,13 @@ body {
   font-size: 28px;
   font-weight: 500;
   margin: 14px auto;
-  width: 20vw;
+  width: max(20vw, 200px);
   text-align: center;
+}
+
+.back-button {
+  width: 90px;
+  margin: 20px auto;
 }
 
 /* Media queries */
