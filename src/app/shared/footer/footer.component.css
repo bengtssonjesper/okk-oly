@@ -1,0 +1,17 @@
+.my-footer {
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  bottom: 0;
+  background-color: #fdb813;
+  background-image: linear-gradient(315deg, #fdda13 0%, #797d86 74%);
+}
+
+.footer-col {
+  margin: 5px;
+}
+
+.footer-row {
+  font-size: large;
+  font-weight: bolder;
+}

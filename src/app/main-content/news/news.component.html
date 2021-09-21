@@ -1,0 +1,32 @@
+<div class="bg"></div>
+<div class="wrapper">
+  <div class="semi-full-width">
+    <div class="container content-container">
+      <h1 id="content-heading">Nyheter</h1>
+      <div
+        class="row news-post"
+        *ngFor="let news of newsPageSlice"
+        [routerLink]="['/news', news.id]"
+      >
+        <div class="col-sm-9">
+          <div class="row">
+            <h2>{{ news.title }}</h2>
+          </div>
+          <div class="row">
+            <p>{{ news.content }}</p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <img src="{{ news.imageURL }}" alt="image" class="news-thumbnail" />
+        </div>
+      </div>
+    </div>
+    <mat-paginator
+      [length]="this.allNews.length"
+      [pageSize]="this.initialPageSize"
+      [pageSizeOptions]="[5, 10, 15]"
+      (page)="onPageChange($event)"
+      showFirstLastButtons
+    ></mat-paginator>
+  </div>
+</div>

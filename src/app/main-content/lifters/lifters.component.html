@@ -1,0 +1,44 @@
+<div class="bg"></div>
+<div class="wrapper">
+  <div class="semi-full-width">
+    <div class="container content-container">
+      <h1 id="content-heading">Våra lyftare</h1>
+
+      <mat-grid-list
+        [cols]="colSpan"
+        rowHeight="500"
+        (window:resize)="onResize($event)"
+      >
+        <mat-grid-tile *ngFor="let lifter of ourLifters">
+          <mat-card class="example-card" [routerLink]="['/lifters', lifter.id]">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>{{ lifter.name }}</mat-card-title>
+              <mat-card-subtitle>
+                <span class="underline">Viktklass</span>:
+                {{ lifter.weightclass }} kg
+              </mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-content>
+              <img
+                mat-card-image
+                class="lifter-image"
+                src="{{ lifter.imageURL }}"
+                alt="lifterImage"
+              />
+              <p>
+                <span class="underline">Bästa ryck</span>:
+                {{ lifter.bestSnatch }} kg
+              </p>
+              <p>
+                <span class="underline">Bästa stöt</span>:
+                {{ lifter.bestCJ }} kg
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+</div>

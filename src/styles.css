@@ -1,1 +1,103 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+}
+.wrapper {
+  min-height: 100%;
+}
+
+.bg {
+  background-image: url(https://source.unsplash.com/VJ2s0c20qCo);
+  height: 110vh;
+  width: 110vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  /* Put the image in the back */
+  z-index: -1;
+}
+.bg::after {
+  /* We use this element to get rid of white borders when blurring */
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px) sepia(5%);
+  pointer-events: none;
+}
+
+.semi-full-width {
+  width: 80%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.content-container {
+  position: relative;
+  top: 20px;
+}
+
+#content-heading {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 14px auto;
+  width: 20vw;
+  text-align: center;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 200px) {
+  .semi-full-width {
+    width: 95%;
+  }
+  #home-white-div {
+    top: 0vh;
+  }
+  #nav-logo {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 575px) {
+  .semi-full-width {
+    width: 90%;
+  }
+  #home-white-div {
+    top: 15vh;
+  }
+  #nav-logo {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .semi-full-width {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .semi-full-width {
+    width: 80%;
+  }
+}

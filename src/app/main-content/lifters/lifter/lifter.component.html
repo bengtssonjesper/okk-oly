@@ -1,0 +1,43 @@
+<div class="bg"></div>
+<div class="wrapper">
+  <div class="semi-full-width">
+    <div class="container content-container">
+      <h1 id="content-heading">{{ lifter.name }}</h1>
+      <mat-grid-list
+        cols="4"
+        gutterSize="10px"
+        rowHeight="100px"
+        (window:resize)="onResize($event)"
+      >
+        <mat-grid-tile
+          class="mat-grid-tile"
+          [colspan]="imageValues.cols"
+          [rowspan]="imageValues.rows"
+          ><img src="{{ lifter.imageURL }}" alt="" />
+        </mat-grid-tile>
+        <mat-grid-tile
+          class="mat-grid-tile"
+          [colspan]="descriptionValues.cols"
+          [rowspan]="descriptionValues.rows"
+        >
+          <div id="lifter-information">
+            <p>Namn: {{ lifter.name }}</p>
+            <p>Bästa ryck: {{ lifter.bestSnatch }} kg</p>
+            <p>Bästa stöt: {{ lifter.bestCJ }} kg</p>
+            <p>Bästa total: {{ lifter.bestTotal }} kg</p>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile
+          class="mat-grid-tile"
+          [colspan]="bioValues.cols"
+          [rowspan]="bioValues.rows"
+        >
+          <p id="bio-paragraph">{{ lifter.bio }}</p>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <button class="btn btn-primary back-button" routerLink="/lifters">
+        Tillbaka
+      </button>
+    </div>
+  </div>
+</div>
