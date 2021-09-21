@@ -38,3 +38,8 @@ html {
   color: #fff;
   position: relative;
 }
+
+p,
+h1 {
+  text-align: center;
+}
