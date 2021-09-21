@@ -3,10 +3,18 @@
   padding: 10px;
 }
 
+.lifterImage {
+  width: 100%;
+}
+
 #lifter-information {
   position: absolute;
   top: 10px;
   left: 10px;
+}
+
+.lifter-content p {
+  font-size: 16px;
 }
 
 .back-button {
@@ -16,6 +24,15 @@
 
 #bio-paragraph {
   font-size: 16px;
+}
+
+.button-row {
+  margin: 10px;
+}
+
+.back-button {
+  width: 90px;
+  margin: 20px auto;
 }
 
 /* Media Queries */

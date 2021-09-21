@@ -1,4 +1,4 @@
-<div class="bg"></div>
+<!-- <div class="bg"></div>
 <div class="wrapper">
   <div class="semi-full-width">
     <div class="container content-container">
@@ -38,6 +38,43 @@
       <button class="btn btn-primary back-button" routerLink="/lifters">
         Tillbaka
       </button>
+    </div>
+  </div>
+</div> -->
+
+<div class="bg"></div>
+<div class="wrapper">
+  <div class="semi-full-width">
+    <div class="container content-container">
+      <div class="row">
+        <h1 id="content-heading">{{ lifter.name }}</h1>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-8">
+          <img
+            class="lifterImage"
+            src="{{ lifter.imageURL }}"
+            alt="blogPost Image"
+          />
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <p>Namn: {{ lifter.name }}</p>
+          <p>Bästa ryck: {{ lifter.bestSnatch }} kg</p>
+          <p>Bästa stöt: {{ lifter.bestCJ }} kg</p>
+          <p>Bästa total: {{ lifter.bestTotal }} kg</p>
+        </div>
+
+        <div class="row g-4 lifter-content">
+          <div class="col-md-12">
+            <p>{{ lifter.bio }}</p>
+          </div>
+        </div>
+        <div class="row g-2 button-row">
+          <button class="btn btn-danger back-button" routerLink="/lifters">
+            Tillbaka
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

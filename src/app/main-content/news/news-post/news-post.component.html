@@ -1,9 +1,27 @@
 <div class="bg"></div>
 <div class="wrapper">
   <div class="semi-full-width">
-    <div class="container">
-      <div class="row">{{ newsPost.title }}</div>
-      <div class="row">{{ newsPost.content }}</div>
+    <div class="container content-container">
+      <div class="row">
+        <h1 id="content-heading">{{ newsPost.title }}</h1>
+      </div>
+      <div class="row g-4">
+        <div class="col-sm-4">
+          <p>Skribent: {{ newsPost.author }}</p>
+          <p>
+            Datum: {{ newsPost.dateWritten.getDate() }} /
+            {{ newsPost.dateWritten.getMonth() }} /
+            {{ newsPost.dateWritten.getFullYear() }}
+          </p>
+        </div>
+        <div class="col-sm-8">
+          <img src="{{ newsPost.imageURL }}" alt="blogPost Image" />
+        </div>
+
+        <div class="row g-4 newsPost-content">
+          <p>{{ newsPost.content }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
